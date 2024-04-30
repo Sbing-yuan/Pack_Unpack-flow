@@ -24,7 +24,10 @@ try:
 except:
     print("[Warn] Not able to remove old decode file")
 
-uu.decode(decode_file + ".uu")
+try:
+	uu.decode(decode_file + ".uu")
+except:
+    print("[Warn] Not able to decode uuencoded file")
 
 # open file
 file = tarfile.open(decode_file)
